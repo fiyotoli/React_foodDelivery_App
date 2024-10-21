@@ -200,7 +200,7 @@ const menuData = [
     image: doroWotImage2,
   },
   {
-    id: 24,
+    id: 25,
     title: "Doro Wot",
     price: "60.00",
     category: "Doro Wot",
