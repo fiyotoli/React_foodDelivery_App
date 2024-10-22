@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
-import { PhoneOutlined, EnvironmentOutlined, MailOutlined } from '@ant-design/icons'; // Import Ant Design icons for contact info
+import { PhoneOutlined, EnvironmentOutlined, MailOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import logoImage from '../../assets/logo.jpg'; // Import your logo image
 
 const Footer = () => {
@@ -16,15 +17,14 @@ const Footer = () => {
             <h5>Quick Links</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="/menu" className="text-dark" style={{ textDecoration: 'none' }}>Menu</a>
+                <Link to="/menu" className="text-dark" style={{ textDecoration: 'none' }}>Menu</Link>
               </li>
               <li>
-                <a href="/about" className="text-dark" style={{ textDecoration: 'none' }}>About Us</a>
+                <Link to="/about" className="text-dark" style={{ textDecoration: 'none' }}>About Us</Link>
               </li>
               <li>
-                <a href="/contact" className="text-dark" style={{ textDecoration: 'none' }}>Contact</a>
+                <Link to="/contact" className="text-dark" style={{ textDecoration: 'none' }}>Contact</Link>
               </li>
-             
             </ul>
           </div>
           <div className="col-md-3 mb-4">
@@ -45,8 +45,8 @@ const Footer = () => {
           <div className="col-md-3 mb-2">
             <h5>Our Services</h5>
             <ul className="list-unstyled">
-              <li>Fast Delivery</li>
-              <li>Catering Services</li>
+             <li>Fast Delivery</li>
+              <li >Catering Services</li>
               <li>Meal Subscriptions</li>
               <li>Personalized Meal Plans</li>
               <li>Corporate Catering</li>

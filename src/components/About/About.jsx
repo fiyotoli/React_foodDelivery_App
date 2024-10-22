@@ -1,6 +1,6 @@
 import React from 'react';
 import aboutImage from '../../assets/about-image.jpg'; // Replace with your actual image path
-
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 const About = () => {
   return (
     <div className="container-fluid   bg-light">
@@ -20,7 +20,7 @@ const About = () => {
           <p className="text-muted">
             We are committed to providing the best service possible. Our team is dedicated to ensuring customer satisfaction and delivering top-quality products that meet your needs. Our mission is to make your experience enjoyable and memorable.
           </p>
-          <button className="btn btn-danger">Read More</button>
+          <Link to ="/about"><button className="btn btn-danger">Read More</button></Link>
         </div>
       </div>
       </div>
