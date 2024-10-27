@@ -3,7 +3,7 @@ import { FaTruck, FaUtensils, FaConciergeBell, FaHeadset, FaCar, FaPizzaSlice, F
 
 const Service = ({ icon: Icon, title, description, isDanger }) => {
   return (
-    <div className="col-md-3 d-flex align-items-stretch mb-4"> {/* Added mb-4 for bottom margin */}
+    <div className="col-md-6 col-lg-4 d-flex align-items-stretch mb-4"> {/* Added mb-4 for bottom margin */}
       <div
         className={`text-center flex-fill ${isDanger ? 'bg-danger text-white shadow' : ''}`} // Add bg-danger and shadow if isDanger is true
         style={{

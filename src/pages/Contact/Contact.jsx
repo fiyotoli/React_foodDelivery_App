@@ -1,81 +1,88 @@
-// src/pages/Contact.jsx
 import React from 'react';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { Form, Input, Button, Row, Col, Typography } from 'antd';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+
+const { Title, Text } = Typography;
 
 const Contact = () => {
-    return (
-        <div className="container mt-5 pt-5">
-            <h2 className="text-center text-danger">Contact Information</h2>
-            <p className="text-center text-muted">
-                We are here to assist you! If you have any questions or need support, 
-                please feel free to reach out through any of the contact methods listed below. 
-                Our team is ready to help you with your needs.
-            </p>
-            <div className="row mt-4">
-                {/* Left Section - Contact Cards */}
-                <div className="col-md-6">
-                    <div className="row">
-                        <div className="col-lg-6 mb-3">
-                            <div className="card p-3 shadow border-danger">
-                                <FaPhone size={40} className="mb-2 text-danger" />
-                                <h5>Phone</h5>
-                                <p>+1 (555) 123-4567</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-3">
-                            <div className="card p-3 shadow border-danger">
-                                <FaEnvelope size={40} className="mb-2 text-danger" />
-                                <h5>Email</h5>
-                                <p>info@example.com</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-3">
-                            <div className="card p-3 shadow border-danger">
-                                <FaMapMarkerAlt size={40} className="mb-2 text-danger" />
-                                <h5>Address</h5>
-                                <p>1234 Example Street, City, Country</p>
-                            </div>
-                        </div>
-                        <div className="col-lg-6 mb-3">
-                            <div className="card p-3 shadow border-danger">
-                                <FaClock size={40} className="mb-2 text-danger" />
-                                <h5>Hours</h5>
-                                <p>Mon - Fri: 9 AM - 5 PM</p>
-                                <p>Sat: 10 AM - 4 PM</p>
-                                <p>Sun: Closed</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {/* Right Section - Paragraphs */}
-                <div className="col-md-6">
-                    <div className="row">
-                        <div className="col-12 mb-3">
-                            <p className="text-muted">
-                                Our customer service team is dedicated to providing you with the best experience. 
-                                We are here to answer any questions you may have about our products or services.
-                            </p>
-                        </div>
-                        <div className="col-12 mb-3">
-                            <p className="text-muted">
-                                Your feedback is important to us! If you have any suggestions or comments, please do not hesitate to reach out.
-                                We value your input and strive to improve our services based on your experiences.
-                            </p>
-                        </div>
-                        <div className="col-12 mb-3">
-                            <p className="text-muted">
-                                Follow us on our social media channels to stay updated on our latest news, promotions, and offers. 
-                                We love connecting with our customers online!
-                            </p>
-                        </div>
-                    </div>
-                </div>
+  return (
+    <div className="container my-5 pt-5">
+      <Row gutter={[32, 32]} className="pt-5">
+        {/* Form Section (Left) */}
+        <Col xs={24} md={12}>
+          <div className="p-5" style={{ backgroundColor: '#f8d7da', borderRadius: '8px' }}>
+            <Form layout="vertical">
+              <Form.Item
+                label="Name"
+                name="name"
+                rules={[{ required: true, message: 'Please enter your name' }]}
+              >
+                <Input placeholder="Enter your name" />
+              </Form.Item>
+              <Form.Item
+                label="Email"
+                name="email"
+                rules={[
+                  { required: true, message: 'Please enter your email' },
+                  { type: 'email', message: 'Please enter a valid email' }
+                ]}
+              >
+                <Input placeholder="Enter your email" />
+              </Form.Item>
+              <Form.Item
+                label="Your Order or Message"
+                name="message"
+                rules={[{ required: true, message: 'Please enter your message' }]}
+              >
+                <Input.TextArea rows={4} placeholder="Enter your order details or message" />
+              </Form.Item>
+              <Form.Item>
+                <Button type="primary" danger htmlType="submit">
+                  Submit
+                </Button>
+              </Form.Item>
+            </Form>
+          </div>
+        </Col>
+
+        {/* Text Section (Right) */}
+        <Col xs={24} md={12} className="d-flex flex-column justify-content-center">
+          <Title level={2} style={{ color: '#dc3545' }}>Contact Us</Title>
+          <Text className="mb-4 text-muted">
+            We're here to help you with your food delivery needs! Reach out to us for any inquiries or assistance with your orders.
+          </Text>
+
+          <ul style={{ padding: 0, listStyle: 'none' }}>
+            <li className="mb-3">
+              <FaEnvelope className="text-danger me-2" /> 
+              <Text type="secondary">support@fooddeliveryservice.com</Text>
+            </li>
+            <li className="mb-3">
+              <FaPhone className="text-danger me-2" /> 
+              <Text type="secondary">+123 456 7890</Text>
+            </li>
+            <li className="mb-3">
+              <FaMapMarkerAlt className="text-danger me-2" /> 
+              <Text type="secondary">Bole, Addis Ababa, Ethiopia</Text>
+            </li>
+          </ul>
+
+          <Title level={4} style={{ color: '#dc3545', marginTop: '24px' }}>Follow Us</Title>
+          <div className="d-flex">
+            <div className="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center shadow me-3" style={{ width: '50px', height: '50px' }}>
+              <FaFacebook size={24} />
             </div>
-           
-              
+            <div className="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center shadow me-3" style={{ width: '50px', height: '50px' }}>
+              <FaTwitter size={24} />
             </div>
-       
-    );
+            <div className="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center shadow" style={{ width: '50px', height: '50px' }}>
+              <FaInstagram size={24} />
+            </div>
+          </div>
+        </Col>
+      </Row>
+    </div>
+  );
 };
 
 export default Contact;

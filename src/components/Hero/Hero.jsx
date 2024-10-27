@@ -6,11 +6,11 @@ import heroImage from '../../assets/hero.jpg'; // Adjust the path to your image
 const Hero = () => {
   return (
     <section className="hero d-flex align-items-center mt-5 pt-5">
-      <div className="container">
+      <div className="container mt-4">
         <div className="row">
           {/* Left Section: Text */}
           <div className="text-section col-12 col-md-6 d-flex flex-column justify-content-center text-center text-md-start mb-4 mb-md-0">
-            <h1 className="font-weight-bolder display-4" >
+            <h1 className="fw-bold display-4" >
               Welcome to <span className='text-danger'>FoodDelivery</span>
             </h1>
             <p className="lead mt-3">

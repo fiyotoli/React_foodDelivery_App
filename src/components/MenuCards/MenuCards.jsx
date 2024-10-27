@@ -34,14 +34,11 @@ const MenuCards = () => {
 
   return (
     <div className="container mt-5">
-      <h2 className="text-center  font-weight-bolder">Our <span className='text-danger'>Menu</span></h2>
-      <p className="text-center text-muted mb-4 col-10 container">
-        Explore our delicious menu options and find your favorites! Experience the best food delivery service right at your doorstep! Fresh and delicious meals from your favorite restaurants.
-      </p>
-      <div className="row mb-4">
+      <h2 className="text-center mb-5 font-weight-bolder">Our <span className='text-danger'>Menu</span></h2>
+       <div className="row mb-4">
         {/* Image Filters */}
         {Object.keys(categoryImages).map(category => (
-          <div key={category} className=" col-6 col-md-2">
+          <div key={category} className=" col-6 col-md-3 col-lg-2">
             <div className="text-center mb-2">
               <div
                 className="bg-light p-2 rounded shadow-lg"
@@ -71,8 +68,8 @@ const MenuCards = () => {
         ))}
       </div>
       <div className="row">
-        {filteredData.slice(0, isExpanded ? filteredData.length : 4).map((item) => (
-          <div key={item.id} className="col-md-3 mb-4">
+        {filteredData.slice(0, isExpanded ? filteredData.length : 9).map((item) => (
+          <div key={item.id} className="col-md-6 col-lg-4 mb-4">
             <div className="card  d-flex flex-column" style={{ height: '100%', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }}>
               <div style={{ position: 'relative' }}>
                 <img
@@ -89,8 +86,8 @@ const MenuCards = () => {
                 </div>
               </div>
               <div className="card-body  text-left"> {/* Added text-left for alignment */}
-                <h5 className="card-title" style={{  width: 'auto' }}>
-                  <span className="bg-primary bg-opacity-10 text-black p-2 rounded "> {/* Changed text color to black */}
+                <h5 className="card-title" >
+                  <span className=" text-black bg-primary bg-opacity-10 mt-2 py-1 px-1 rounded lead "> {/* Changed text color to black */}
                     {item.title}
                   </span>
                 </h5>

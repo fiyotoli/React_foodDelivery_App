@@ -32,7 +32,7 @@ const Testimonial = () => {
                   />
                   <div className="ms-3">
                     <p className="mb-0 text-muted">"I love the food delivery service! The meals are always fresh and delicious."</p>
-                    <h6 className="mb-0 font-weight-bolder text-danger">- John Doe</h6>
+                    <h6 className="mb-0 font-weight-bolder text-danger">- Antenek Degu</h6>
                     <div>
                       {/* 5-star rating */}
                       <FaStar className='text-danger ' />
@@ -55,7 +55,7 @@ const Testimonial = () => {
                   />
                   <div className="ms-3">
                     <p className="mb-0 text-muted">"Fantastic service! My orders arrive hot and on time every time."</p>
-                    <h6 className="font-weight-bolder text-danger mb-0">- Jane Smith</h6>
+                    <h6 className="font-weight-bolder text-danger mb-0">- Yab Tefera</h6>
                     <div>
                       {/* 5-star rating */}
                       <FaStar className='text-danger ' />
@@ -78,7 +78,7 @@ const Testimonial = () => {
                   />
                   <div className="ms-3">
                     <p className="mb-0 text-muted">"Great experience! Highly recommend for anyone craving good food."</p>
-                    <h6 className="font-weight-bolder text-danger mb-0">- Mike Johnson</h6>
+                    <h6 className="font-weight-bolder text-danger mb-0">- Fiyo Toli</h6>
                     <div>
                       {/* 5-star rating */}
                       <FaStar  className='text-danger ' />

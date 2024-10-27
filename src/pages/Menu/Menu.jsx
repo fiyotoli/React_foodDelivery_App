@@ -18,9 +18,9 @@ const Menu = () => {
       !selectedCategory || food.category === selectedCategory;
     const matchesPrice =
       !priceRange ||
-      (priceRange === 'low' && food.price < 10) ||
-      (priceRange === 'medium' && food.price >= 10 && food.price <= 20) ||
-      (priceRange === 'high' && food.price > 20);
+      (priceRange === 'low' && food.price >= 50 && food.price <= 60) ||
+      (priceRange === 'medium' && food.price >= 70 && food.price <= 150) ||
+      (priceRange === 'high' && food.price > 150);
     const matchesSearch =
       food.title.toLowerCase().includes(searchQuery.toLowerCase());
 
@@ -75,8 +75,6 @@ const Menu = () => {
 
   return (
     <div className="container mt-5 pt-5">
-      
-
       {/* Filter section */}
       <div className="row mb-4 mt-3">
         <div className="col-md-6 mx-auto mb-3"> {/* Centering the search input */}
@@ -132,13 +130,13 @@ const Menu = () => {
                 All Prices
               </Dropdown.Item>
               <Dropdown.Item onClick={() => setPriceRange('low')}>
-                Below $10
+                50 - 60 ETB
               </Dropdown.Item>
               <Dropdown.Item onClick={() => setPriceRange('medium')}>
-                $10 - $20
+                70 - 150 ETB
               </Dropdown.Item>
               <Dropdown.Item onClick={() => setPriceRange('high')}>
-                Above $20
+                Above 150 ETB
               </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
@@ -150,7 +148,7 @@ const Menu = () => {
           <div className="text-center">No items found.</div>
         ) : (
           filteredData.map((food) => (
-            <div className="col-md-4 col-lg-4 mb-4" key={food.id}>
+            <div className="col-md-6 col-lg-4 col-lg-4 mb-4" key={food.id}>
               <Card style={cardStyle}>
                 <Card.Img
                   variant="top"
@@ -162,7 +160,7 @@ const Menu = () => {
                 <Card.Body>
                   <Card.Title className=' lead'>{food.title}</Card.Title>
                   <Card.Text>
-                    <strong style={priceStyle}>${food.price}</strong> {/* Only display price number */}
+                    <strong style={priceStyle}>{food.price} ETB</strong> {/* Updated to display price in ETB */}
                   </Card.Text>
                   <Button variant="danger" style={{ borderRadius: '50px' }} onClick={() => handleViewDetails(food.id)}>
                     View Details

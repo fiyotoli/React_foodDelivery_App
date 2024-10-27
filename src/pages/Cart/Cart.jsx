@@ -58,7 +58,7 @@ const Cart = () => {
                                 {cart.map(item => (
                                     <tr key={item.id}>
                                         <td>
-                                            <img src={item.image} alt={item.title} style={{ height: '100px', objectFit: 'cover' }} />
+                                            <img src={item.image} alt={item.title} style={{ height: '100px', width: '100px', objectFit: 'cover' }} />
                                         </td>
                                         <td>{item.title}</td>
                                         <td>${item.price}</td>

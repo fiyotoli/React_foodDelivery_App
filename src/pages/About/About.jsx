@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaCheckCircle } from 'react-icons/fa';
 import founderImage from '../../assets/founder.jpg'; // Update the path based on your folder structure
 
 const About = () => {
@@ -7,7 +8,9 @@ const About = () => {
       <div className="row">
         {/* About Section */}
         <div className="col-md-12 text-center mb-5">
-          <h2 className="font-weight-bold" style={{ fontSize: '2.5rem' }}>About <span className='text-danger'>Us</span> </h2>
+          <h2 className="font-weight-bold" style={{ fontSize: '2.5rem' }}>
+            About <span className='text-danger'>Us</span>
+          </h2>
           <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
             Welcome to our food delivery website! We are dedicated to bringing you delicious meals right to your door. Our goal is to make it easy and convenient for you to enjoy high-quality food from the comfort of your own home. Whether you’re craving fast food, gourmet cuisine, or something in between, we’ve got you covered!
           </p>
@@ -16,9 +19,10 @@ const About = () => {
           </p>
         </div>
 
-        {/* Founder Section */}
-        <div className="col-md-6 mx-auto">
-          <div className="card">
+        {/* Founder and Why Choose Us Section in the same row */}
+        <div className="col-md-6">
+          {/* Founder Card */}
+          <div className="card shadow mb-5"> {/* Added shadow class for card */}
             <img
               src={founderImage}
               className="card-img-top"
@@ -33,17 +37,31 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="row mt-5">
-        <div className="col-md-12">
+        <div className="col-md-6">
+          {/* Why Choose Us Section */}
           <h4 className="font-weight-bold text-center" style={{ fontSize: '1.5rem' }}>Why Choose Us?</h4>
           <ul className="list-unstyled mt-3" style={{ fontSize: '18px', lineHeight: '1.6' }}>
-            <li>✔ Fast and reliable delivery service.</li>
-            <li>✔ Wide range of cuisines and menu options.</li>
-            <li>✔ Easy and user-friendly online ordering process.</li>
-            <li>✔ Quality food from top restaurants and chefs.</li>
-            <li>✔ Friendly and efficient customer support.</li>
+            <li className="d-flex align-items-center mb-3">
+              <FaCheckCircle className="text-danger me-2" /> {/* Changed color to danger */}
+              <span>Fast and reliable delivery service.</span>
+            </li>
+            <li className="d-flex align-items-center mb-3">
+              <FaCheckCircle className="text-danger me-2" />
+              <span>Wide range of cuisines and menu options.</span>
+            </li>
+            <li className="d-flex align-items-center mb-3">
+              <FaCheckCircle className="text-danger me-2" />
+              <span>Easy and user-friendly online ordering process.</span>
+            </li>
+            <li className="d-flex align-items-center mb-3">
+              <FaCheckCircle className="text-danger me-2" />
+              <span>Quality food from top restaurants and chefs.</span>
+            </li>
+            <li className="d-flex align-items-center mb-3">
+              <FaCheckCircle className="text-danger me-2" />
+              <span>Friendly and efficient customer support.</span>
+            </li>
           </ul>
         </div>
       </div>

@@ -3,11 +3,10 @@ import aboutImage from '../../assets/about-image.jpg'; // Replace with your actu
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 const About = () => {
   return (
-    <div className="container-fluid   bg-light">
+    <div className="container-fluid ">
         <h1 className='font-weight-bolder text-center'>About <span className='text-danger'> Us
        </span></h1>
-       <p className='text-center text-muted container col-10'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime ducimus voluptatem voluptate qui, consectetur obcaecati omnis eos aliquid officiis ea.</p>
-        <div className='container'>
+         <div className='container'>
       <div className="row align-items-center p-4 rounded">
         {/* Left Section: Image */}
         <div className="col-md-6 mb-3">

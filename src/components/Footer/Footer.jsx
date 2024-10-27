@@ -31,7 +31,7 @@ const Footer = () => {
             <h5>Contact Us</h5>
             <div className="d-flex align-items-center mb-2">
               <EnvironmentOutlined className="text-danger" style={{ fontSize: '20px', marginRight: '10px' }} />
-              <span className="text-dark">123 Food Street, City, Country</span>
+              <span className="text-dark">Bole sub city, Addids Ababa, Ethiopia</span>
             </div>
             <div className="d-flex align-items-center mb-2">
               <PhoneOutlined className="text-danger" style={{ fontSize: '20px', marginRight: '10px' }} />
