@@ -1,7 +1,7 @@
 // src/pages/Login/Login.jsx
 import React, { useState } from 'react';
 import { Form, Input, Button, Alert } from 'antd'; // Import Ant Design components
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 const Login = () => {
@@ -41,7 +41,7 @@ const Login = () => {
                 </Form>
                 <div className="mt-3 text-center">
                     Don't have an account?{' '}
-                    <a href="/register" style={{ textDecoration: 'none' }}>Register here</a>
+                    <Link to="/register" style={{ textDecoration: 'none' }}>Register here</Link>
                 </div>
             </div>
         </div>
