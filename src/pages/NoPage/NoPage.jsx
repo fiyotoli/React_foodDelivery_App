@@ -1,25 +1,31 @@
-// src/pages/NoPage.jsx
+// NoPage.jsx
 import React from 'react';
-import { FaExclamationTriangle } from 'react-icons/fa'; // Importing an icon from react-icons
-import { useNavigate } from 'react-router-dom'; // Importing useNavigate for navigation
+import { Link } from 'react-router-dom';
+import yourImage from '../../assets/404.jpg'; // Import your image
 
 const NoPage = () => {
-  const navigate = useNavigate(); // Create a navigate function
-
-  const handleBackHome = () => {
-    navigate('/'); // Navigate to the home page
-  };
-
-  return (
-    <div className="d-flex flex-column justify-content-center align-items-center vh-100 text-center">
-      <FaExclamationTriangle className="display-1 text-danger" />
-      <h2 className='display-3 text-danger'>404 Not Found</h2>
-      <p>The page you are looking for does not exist.</p>
-      <button className="btn btn-primary mt-3" onClick={handleBackHome}>
-        Back to Home
-      </button>
-    </div>
-  );
+    return (
+        <div className="container mt-5 pt-5">
+            <div className="row align-items-center justify-content-center">
+                {/* Left column for the image */}
+                <div className="col-md-6 mb-3 text-center">
+                    <img
+                        src={yourImage}
+                        alt="Error illustration"
+                        className="img-fluid" // Bootstrap class for responsive image
+                    />
+                </div>
+                {/* Right column for the text */}
+                <div className="col-md-6  mb-3">
+                    <h1 className="display-1 fw-bold ">Oops!</h1>
+                    <p className="text-muted">
+                        It seems that you have encountered an error. Please check the URL or return to the home page.
+                    </p>
+                    <Link to="/" className="btn btn-danger">Back to Home</Link>
+                </div>
+            </div>
+        </div>
+    );
 };
 
 export default NoPage;
