@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
 import Home from './pages/Home/Home';
@@ -48,58 +48,59 @@ const App = () => {
 
   return (
     <div className="App">
-      <Navbar />
+      <Router basename="/React_foodDelivery_App">  {/* Add basename to match your GitHub Pages repo */}
+        <Navbar />
 
-      {loading ? (
-        <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
-          <div className="spinner-border text-danger" role="status">
-            <span className="visually-hidden">Loading...</span>
+        {loading ? (
+          <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+            <div className="spinner-border text-danger" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </div>
           </div>
-        </div>
-      ) : (
-        <>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/menu" element={<Menu />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/order" element={<Order />} />
-            <Route path="/order" element={<Order />} />
-            <Route path="/About" element={<About/>} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/payment" element={<Payment />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/menu-detail/:id" element={<MenuDetail />} />
-            <Route path="*" element={<NoPage />} />
-          </Routes>
+        ) : (
+          <>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/menu" element={<Menu />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/order" element={<Order />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/payment" element={<Payment />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/menu-detail/:id" element={<MenuDetail />} />
+              <Route path="*" element={<NoPage />} />
+            </Routes>
 
-          {/* Scroll-to-top button */}
-          {showScroll && (
-            <button
-              onClick={scrollToTop}
-              className="btn btn-danger"
-              style={{
-                position: 'fixed',
-                bottom: '20px',
-                right: '20px',
-                borderRadius: '50%',
-                width: '50px',
-                height: '50px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-              aria-label="Scroll to top"
-            >
-              <FaArrowUp color="white" size={24} />
-            </button>
-          )}
+            {/* Scroll-to-top button */}
+            {showScroll && (
+              <button
+                onClick={scrollToTop}
+                className="btn btn-danger"
+                style={{
+                  position: 'fixed',
+                  bottom: '20px',
+                  right: '20px',
+                  borderRadius: '50%',
+                  width: '50px',
+                  height: '50px',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+                aria-label="Scroll to top"
+              >
+                <FaArrowUp color="white" size={24} />
+              </button>
+            )}
 
-          <Footer />
-        </>
-      )}
+            <Footer />
+          </>
+        )}
+      </Router>
     </div>
   );
 };

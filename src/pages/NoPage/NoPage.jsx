@@ -1,5 +1,6 @@
 // NoPage.jsx
 import React from 'react';
+
 import { Link } from 'react-router-dom';
 import yourImage from '../../assets/404.jpg'; // Import your image
 
