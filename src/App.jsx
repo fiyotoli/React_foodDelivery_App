@@ -52,7 +52,7 @@ const App = () => {
 
         {loading ? (
           <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
-            <div className="spinner-border text-danger" role="status">
+            <div className="spinner-border text-success" role="status">
               <span className="visually-hidden">Loading...</span>
             </div>
           </div>
@@ -78,7 +78,7 @@ const App = () => {
             {showScroll && (
               <button
                 onClick={scrollToTop}
-                className="btn btn-danger"
+                className="btn btn-success"
                 style={{
                   position: 'fixed',
                   bottom: '20px',
