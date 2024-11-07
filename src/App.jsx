@@ -13,8 +13,7 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Payment from './pages/Payment/Payment';
 import Footer from './components/Footer/Footer';
-import Profile from './pages/Profile/Profile';
-import NoPage from './pages/NoPage/NoPage';
+
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 
@@ -72,7 +71,7 @@ const App = () => {
               <Route path="/login" element={<Login />} />
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/menu-detail/:id" element={<MenuDetail />} />
-              <Route path="*" element={<NoPage />} />
+             
             </Routes>
 
             {/* Scroll-to-top button */}
