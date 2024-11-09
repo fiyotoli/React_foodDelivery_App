@@ -22,3 +22,23 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+bower_components/
+
+# Build output
+build/
+dist/
+
+# Environment variables
+.env
+.env.local
+
+# MacOS, Windows, and Linux system files
+.DS_Store
+Thumbs.db

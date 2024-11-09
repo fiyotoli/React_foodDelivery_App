@@ -5,3 +5,7 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+.input:focus {
+    outline: none;
+    box-shadow: none;
+}
