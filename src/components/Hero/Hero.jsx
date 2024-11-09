@@ -17,7 +17,7 @@ const Hero = () => {
               Experience the best food delivery service right at your doorstep! Fresh and delicious meals from your favorite restaurants.
             </p>
             <span>
-            <Link to="/menu" className="btn btn-primary rounded-pill p-2 px-3">
+            <Link to="/menu" className="btn btn-danger rounded-pill p-2 px-3">
               Order Now
             </Link>
             </span>
